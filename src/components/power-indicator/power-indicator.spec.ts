@@ -1,36 +1,36 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { MyComponent } from './power-indicator';
 
-describe('my-component', () => {
+describe('power-indicator', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
       components: [MyComponent],
-      html: '<my-component></my-component>',
+      html: '<power-indicator></power-indicator>',
     });
     expect(root).toEqualHtml(`
-      <my-component>
+      <power-indicator>
         <mock:shadow-root>
           <div>
             Hello, World! I'm
           </div>
         </mock:shadow-root>
-      </my-component>
+      </power-indicator>
     `);
   });
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
       components: [MyComponent],
-      html: `<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>`,
+      html: `<power-indicator first="Stencil" last="'Don't call me a framework' JS"></power-indicator>`,
     });
     expect(root).toEqualHtml(`
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
+      <power-indicator first="Stencil" last="'Don't call me a framework' JS">
         <mock:shadow-root>
           <div>
             Hello, World! I'm Stencil 'Don't call me a framework' JS
           </div>
         </mock:shadow-root>
-      </my-component>
+      </power-indicator>
     `);
   });
 });

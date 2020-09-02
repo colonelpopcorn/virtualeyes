@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green {
+  background-color: limegreen;
+}
+
+.yellow {
+  background-color: gold;
+}
+
+.red {
+  background-color: red;
+}
+
+.is-loading {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+} 
+
+@-webkit-keyframes blink-animation {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+} 
